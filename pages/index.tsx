@@ -611,7 +611,7 @@ const Home: React.FC<HomeProps> = ({ serverSideApiKeyIsSet }) => {
   return (
     <>
       <Head>
-        <title>Chatbot UI</title>
+        <title>ChatGPT Client</title>
         <meta name="description" content="ChatGPT but better." />
         <meta
           name="viewport"
