@@ -1,5 +1,5 @@
 import { Prompt } from '@/types/prompt';
-import { FC, KeyboardEvent, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
 
 interface Props {
