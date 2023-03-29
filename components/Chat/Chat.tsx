@@ -234,12 +234,13 @@ export const Chat: FC<Props> = memo(
                       className="ml-2 cursor-pointer hover:opacity-50"
                       onClick={handleSettings}
                     >
-                    <IconSettings size={18} />
+                      <IconSettings size={18} />
                     </button>
                     <button
                       className="ml-2 cursor-pointer hover:opacity-50"
-                      onClick={onClearAll}>
-                    <IconClearAll size={18} />
+                      onClick={onClearAll}
+                    >
+                      <IconClearAll size={18} />
                     </button>
                   </div>
                   {showSettings && (

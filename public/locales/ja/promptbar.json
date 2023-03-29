@@ -1,0 +1,12 @@
+{
+    "New prompt": "新規プロンプト",
+    "New folder": "新規フォルダ",
+    "No prompts.": "プロンプトがありません。",
+    "Search prompts...": "プロンプトを検索...",
+    "Name": "名称",
+    "Description": "説明",
+    "A description for your prompt.": "プロンプトの説明。",
+    "Prompt": "プロンプト",
+    "Prompt content. Use {{}} to denote a variable. Ex: {{name}} is a {{adjective}} {{noun}}": "プロンプトの本文。変数を示すには{{}}を使用します。例：{{name}}は{{adjective}} {{noun}}です",
+    "Save": "保存"
+}
