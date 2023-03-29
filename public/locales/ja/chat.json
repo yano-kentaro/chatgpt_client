@@ -13,7 +13,7 @@
   "Conversation": "会話",
   "OR": "または",
   "Loading...": "読み込み中...",
-  "Type a message...": "メッセージを入力...",
+  "Type a message...": "「/」キーを押すと、保存済みのプロンプトを選択出来ます",
   "Error fetching models.": "モデルの取得中にエラーが発生しました。",
   "AI": "AI",
   "You": "あなた",
