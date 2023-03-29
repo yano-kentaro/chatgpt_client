@@ -29,7 +29,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import { useEffect, useRef, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
-import { useSession, signIn, signOut } from "next-auth/react";
+import { useSession, signIn, signOut } from 'next-auth/react';
 
 interface HomeProps {
   serverSideApiKeyIsSet: boolean;
@@ -43,7 +43,7 @@ const Home: React.FC<HomeProps> = ({ serverSideApiKeyIsSet }) => {
     required: true,
     onUnauthenticated() {
       signIn();
-    }
+    },
   });
 
   // STATE ----------------------------------------------
@@ -627,7 +627,7 @@ const Home: React.FC<HomeProps> = ({ serverSideApiKeyIsSet }) => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {(session) && (
+      {session && (
         <>
           {selectedConversation && (
             <main
@@ -651,7 +651,9 @@ const Home: React.FC<HomeProps> = ({ serverSideApiKeyIsSet }) => {
                       apiKey={apiKey}
                       folders={folders}
                       onToggleLightMode={handleLightMode}
-                      onCreateFolder={(name) => handleCreateFolder(name, 'chat')}
+                      onCreateFolder={(name) =>
+                        handleCreateFolder(name, 'chat')
+                      }
                       onDeleteFolder={handleDeleteFolder}
                       onUpdateFolder={handleUpdateFolder}
                       onNewConversation={handleNewConversation}
@@ -673,7 +675,7 @@ const Home: React.FC<HomeProps> = ({ serverSideApiKeyIsSet }) => {
                     </button>
                     <div
                       onClick={handleToggleChatbar}
-                      className="absolute top-0 left-0 z-10 w-full h-full bg-black opacity-70 sm:hidden"
+                      className="absolute top-0 left-0 z-10 h-full w-full bg-black opacity-70 sm:hidden"
                     ></div>
                   </div>
                 ) : (
@@ -711,7 +713,9 @@ const Home: React.FC<HomeProps> = ({ serverSideApiKeyIsSet }) => {
                       onCreatePrompt={handleCreatePrompt}
                       onUpdatePrompt={handleUpdatePrompt}
                       onDeletePrompt={handleDeletePrompt}
-                      onCreateFolder={(name) => handleCreateFolder(name, 'prompt')}
+                      onCreateFolder={(name) =>
+                        handleCreateFolder(name, 'prompt')
+                      }
                       onDeleteFolder={handleDeleteFolder}
                       onUpdateFolder={handleUpdateFolder}
                     />
@@ -723,7 +727,7 @@ const Home: React.FC<HomeProps> = ({ serverSideApiKeyIsSet }) => {
                     </button>
                     <div
                       onClick={handleTogglePromptbar}
-                      className="absolute top-0 left-0 z-10 w-full h-full bg-black opacity-70 sm:hidden"
+                      className="absolute top-0 left-0 z-10 h-full w-full bg-black opacity-70 sm:hidden"
                     ></div>
                   </div>
                 ) : (
@@ -753,7 +757,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
         'chat',
         'sidebar',
         'markdown',
-        'promptbar'
+        'promptbar',
       ])),
     },
   };
