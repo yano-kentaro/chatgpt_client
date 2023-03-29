@@ -39,7 +39,12 @@ const Home: React.FC<HomeProps> = ({ serverSideApiKeyIsSet }) => {
   const { t } = useTranslation('chat');
 
   // AUTH ----------------------------------------------
-  const { data: session } = useSession();
+  const { data: session } = useSession({
+    required: true,
+    onUnauthenticated() {
+      signIn();
+    }
+  });
 
   // STATE ----------------------------------------------
 
@@ -522,12 +527,6 @@ const Home: React.FC<HomeProps> = ({ serverSideApiKeyIsSet }) => {
   const handleCreatePromptFolder = (name: string) => {};
 
   // EFFECTS  --------------------------------------------
-  useEffect(() => {
-    if (!session) {
-      signIn();
-    }
-  })
-
   useEffect(() => {
     if (currentMessage) {
       handleSend(currentMessage);
